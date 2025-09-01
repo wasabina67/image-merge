@@ -1,1 +1,56 @@
-
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Merge - 2×2グリッド画像結合</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Image Merge</h1>
+      <p>4つの正方形画像をドラッグ&ドロップして2×2グリッドで結合</p>
+      <div class="drop-zone-grid">
+        <div class="drop-zone" data-position="0">
+          <div class="drop-zone-content">
+            <span>画像1をドロップ</span>
+            <span class="drop-zone-hint">（左上）</span>
+          </div>
+          <img class="preview-image" style="display: none;">
+        </div>
+        <div class="drop-zone" data-position="1">
+          <div class="drop-zone-content">
+            <span>画像2をドロップ</span>
+            <span class="drop-zone-hint">（右上）</span>
+          </div>
+          <img class="preview-image" style="display: none;">
+        </div>
+        <div class="drop-zone" data-position="2">
+          <div class="drop-zone-content">
+            <span>画像3をドロップ</span>
+            <span class="drop-zone-hint">（左下）</span>
+          </div>
+          <img class="preview-image" style="display: none;">
+        </div>
+        <div class="drop-zone" data-position="3">
+          <div class="drop-zone-content">
+            <span>画像4をドロップ</span>
+            <span class="drop-zone-hint">（右下）</span>
+          </div>
+          <img class="preview-image" style="display: none;">
+        </div>
+      </div>
+      <div class="merged-preview">
+        <h3>結合画像プレビュー</h3>
+        <canvas id="mergedCanvas" width="400" height="400"></canvas>
+      </div>
+      <div class="controls">
+        <button id="downloadBtn" disabled>結合画像をダウンロード</button>
+        <button id="resetBtn">リセット</button>
+      </div>
+      <div class="status" id="statusMsg"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
