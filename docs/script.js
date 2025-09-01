@@ -158,9 +158,23 @@ class ImageMerger {
 
   downloadMergedImage() {
     if (this.images.every(img => img !== null)) {
+      const downloadCanvas = document.createElement('canvas');
+      downloadCanvas.width = 500;
+      downloadCanvas.height = 500;
+      const downloadCtx = downloadCanvas.getContext('2d');
+
+      const cellSize = 250;
+      this.images.forEach((img, index) => {
+        const row = Math.floor(index / 2);
+        const col = index % 2;
+        const x = col * cellSize;
+        const y = row * cellSize;
+        downloadCtx.drawImage(img, x, y, cellSize, cellSize);
+      });
+
       const link = document.createElement('a');
       link.download = `merged-image-${new Date().getTime()}.png`;
-      link.href = this.canvas.toDataURL('image/png');
+      link.href = downloadCanvas.toDataURL('image/png');
       link.click();
 
       this.showStatus('画像をダウンロードしました！', 'success');
