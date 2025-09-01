@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea"/>
+      <stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="url(#bg)"/>
+  
+  <!-- 2x2 Grid representing merged images -->
+  <g transform="translate(6,6)">
+    <!-- Top left -->
+    <rect x="0" y="0" width="9" height="9" rx="2" fill="white" opacity="0.9"/>
+    <!-- Top right -->
+    <rect x="11" y="0" width="9" height="9" rx="2" fill="white" opacity="0.7"/>
+    <!-- Bottom left -->
+    <rect x="0" y="11" width="9" height="9" rx="2" fill="white" opacity="0.7"/>
+    <!-- Bottom right -->
+    <rect x="11" y="11" width="9" height="9" rx="2" fill="white" opacity="0.5"/>
+  </g>
+  
+  <!-- Small merge icon in center -->
+  <circle cx="16" cy="16" r="3" fill="white" opacity="0.3"/>
+  <path d="M14,16 L18,16 M16,14 L16,18" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
