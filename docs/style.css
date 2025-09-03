@@ -28,6 +28,13 @@ h1 {
   font-weight: 300;
 }
 
+h1 img {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
 p {
   color: #7f8c8d;
   font-size: 1.1em;
